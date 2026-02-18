@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios CAWICHOS</title>
+    <link rel="stylesheet" href="css.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+    <h1>Servicios de mantenimiento "CAWICHOS"</h1>
+    <p>Encuentra aquí la variedad de servicios que tenemos para apoyarte</p>
+</header>
+
+<nav>
+    <a href="#" onclick="showContent('home')">Inicio</a>
+    <a href="#" onclick="showContent('productos')">Mantenimiento</a>
+    <a href="#" onclick="showContent('ofertas')">Sistemas</a>
+    <a href="#" onclick="showContent('contacto')">Otros</a>
+</nav>
+
+<main class="main-container">
+    <div class="content active" id="home">
+        <h2>Bienvenido a "CAWICHOS"</h2>
+        <p>Explora nuestra variedad de servicios. ¡Y elige el que más te interese!</p>
+        <br>
+        <p>Contáctanos al: <strong>33 2244 5182</strong></p>
+    </div>
+
+    <div class="content" id="productos">
+        <h2>Mantenimiento Preventivo</h2>
+        <div class="container">
+            <div class="product">
+                <img src="Laptop.jpeg" alt="Laptop" class="service-img">
+                <h3>Laptop</h3>
+                <p>Mantenimiento preventivo a Laptop</p>
+                <ul>
+                    <li>Limpieza interna, removiendo exceso de polvo y suciedad</li>
+                    <li>Cambio de pasta térmica</li>
+                    <li>Limpieza externa de la carcasa</li>
+                    <li>Limpieza de teclado y pantalla</li>
+                </ul>
+                <p class="price">$ Solicitar Cotización</p>
+                <button onclick="window.location.href='https://wa.me/523322445182'">Contactar</button>
+            </div>
+
+            <div class="product">
+                <img src="Pc.jpeg" alt="Laptop" class="service-img">
+                <h3>Computadora de Escritorio</h3>
+                <p>Mantenimiento integral de torre y componentes periféricos.</p>
+                <ul>
+                    <li>Sopleteo de fuente y gabinete</li>
+                    <li>Cambio de pasta termica</li>
+                    <li>Limpieza por fuera al gabinete</li>
+                </ul>
+                <p class="price">$ Solicitar Cotización</p>
+                <button onclick="window.location.href='https://wa.me/523322445182'">Contactar</button>
+            </div>
+
+            <div class="product">
+                <img src="Nintendo.jpeg" alt="Laptop" class="service-img">
+                <h3>Nintendo Switch</h3>
+                <p>Mantenimiento preventivo a Nintendo Switch</p>
+                <ul>
+                    <li>Limpieza interno, removiendo polvo de la placa y ventilador</li>
+                    <li>Cambio de pasta termica</li>
+                    <li>Limpieza general (limpieza de pantalla y joycons)</li>
+                </ul>
+                <p class="price">$ Solicitar Cotización</p>
+                <button onclick="window.location.href='https://wa.me/523322445182'">Contactar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="ofertas">
+        <h2>Servicios de Sistemas</h2>
+        <div class="container">
+            <div class="product">
+                <h3>Formateo e Instalación</h3>
+                <p>Instalación de Windows 10/11 optimizado, drivers y paquetería Office. <br>(Puede preguntar unicamente por la paqueteria Office)</p>
+                <p class="price">$ Cotizar</p>
+                <button onclick="window.location.href='https://wa.me/523322445182'">Contactar</button>
+            </div>
+        </div>     
+    </div>
+
+    <div class="content" id="contacto">
+        <h2>Otros servicios</h2>
+        <ul>
+            <li>Apoyo en sacar CURP, RFC, ACTA DE NACIMIENTO (envío por PDF).</li>
+            <br>
+            <li>Apoyo en en meter musica a una USB</li>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <p>Contacto: 33 2244 5182</p>
+    <p>2026 Servicios de mantenimiento "CAWICHOS"</p>
+</footer>
+
+<script>
+    function showContent(id) {
+        // Oculta todos los contenidos
+        document.querySelectorAll('.content').forEach(content => {
+            content.classList.remove('active');
+        });
+        // Muestra solo el seleccionado
+        document.getElementById(id).classList.add('active');
+        // Scrollea hacia arriba al cambiar de pestaña
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* Estructura Global */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto; /* Header, Nav, Main, Footer */
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Encabezado y Navegación */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Contenedor Principal */
+.main-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Manejo de Pestañas (Content) */
+.content {
+    display: none !important; /* Oculto por defecto */
+    text-align: center;
+}
+
+.content.active {
+    display: block !important; /* Visible solo si está activo */
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Tarjetas de Servicios */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.service-img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.product h3 { margin: 10px 0; color: #222; }
+.product p { font-size: 14px; color: #666; }
+.product ul { text-align: left; font-size: 13px; color: #555; }
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 15px 0;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Footer a la derecha */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: right;
+    padding: 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer p { margin: 5px 0; font-size: 14px; }
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* El menú se vuelve vertical */
+    }
+    
+    nav a {
+        padding: 10px;
+        border-bottom: 1px solid #555;
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Título un poco más chico */
+    }
+
+    .product {
+        width: 90%; /* Las tarjetas ocupan casi todo el ancho */
+        max-width: 350px;
+    }
+}
+
+/* Ajustes para Celulares (menos de 480px) */
+@media (max-width: 480px) {
+    .main-container {
+        padding: 10px;
+    }
+
+    footer {
+        text-align: center; /* En celular es más cómodo ver el texto centrado */
+        padding: 15px;
+    }
+
+    .service-img {
+        height: 120px; /* Imágenes más pequeñas para ahorrar espacio */
+    }
+}
